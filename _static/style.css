@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,400italic,500,600');
+
+body {
+  font-size: 1em;
+  font-family: 'Source Sans Pro', 'PT Sans', Helvetica, Arial, sans-serif;
+  color: rgba(0,0,0,0.75);
+  background-color: #f6ecf8;
+}
+
+header h1 {
+  font-size: 1.3em;
+}
+
+header h2 {
+  font-size: 1.2em;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+code, kbd, pre, samp {
+  font-family: Monaco ,'Source Code Pro', monospace, serif;
+  line-height: 1.4em;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 400;
+  color: rgba(50,50,50,0.75);
+}
+
+a, a:hover {
+  font-weight: 400;
+}
+
+div.postmeta {
+  font-weight: 300;
+}
+
+header h2 {
+  font-weight: 300;
+}
+
+article h1 a, article h1 a:visited, article h1 a:hover, article h1 a:active {
+  color: #512da8;
+}
+
+header a, header a:visited, header a:hover, header a:active {
+  color: rgba(50,50,50,0.75);
+}
+
+.docutils.literal {
+  background: rgba(0,0,0,0.04);
+  color: rgba(50,50,50,0.75);
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 90%;
+}
+
+a, a:visited {
+  color: #512da8;
+}
+
+a:hover {
+  color: #512da8;
+}
+
+blockquote {
+  border-left: 10px solid #512da8;
+}
+
+h2, h3 {
+  color: #4caf50;
+}
+
+h1 {
+  color: #512da8;
+}
+
+.highlight {
+  background-color: #004454;
+  color: #93A1A1;
+  border: 1px solid #004454;
+  border-radius: 4px;
+}
