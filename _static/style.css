@@ -62,6 +62,10 @@ a, a:visited {
   color: #512da8;
 }
 
+.section a, .section a:visited {
+  font-weight: bold;
+}
+
 a:hover {
   color: #512da8;
 }
