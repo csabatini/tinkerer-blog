@@ -14,7 +14,7 @@ project = 'Caleb Sabatini'
 tagline = 'Data Engineering'
 
 # Change this to the description of your blog
-description = ''
+description = 'Personal Blog of Caleb Sabatini'
 
 # Change this to your name
 author = 'Caleb Sabatini'
@@ -23,14 +23,14 @@ author = 'Caleb Sabatini'
 copyright = '2017, ' + author
 
 # Change this to your blog root URL (required for RSS feed)
-website = 'http://127.0.0.1/blog/html/'
+website = 'https://sabatini.io'
 
 # **************************************************************
 # More tweaks you can do
 # **************************************************************
 
 # Add your Disqus shortname to enable comments powered by Disqus
-disqus_shortname = None
+disqus_shortname = 'sabatini'
 
 # Change your favicon (new favicon goes in _static directory)
 html_favicon = '_static/tinkerer.ico'
