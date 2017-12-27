@@ -1,5 +1,6 @@
 import os
 import re
+from subprocess import Popen, PIPE
 
 preamble = """Sitemap
 =======
@@ -15,35 +16,55 @@ preamble = """Sitemap
 
 """
 
-years = []
-posts = []
 
-for d in os.listdir('.'):
-    if re.match(r'\d{4}$', d):  # let's assume a 4-digit number is a year
-        years.append(d)
+def create_sitemap() -> None:
+    """Generate the master.rst index of all pages and posts"""
+    years = []
+    posts = []
+    for d in os.listdir('.'):
+        # let's assume a 4-digit number is a year
+        if re.match(r'\d{4}$', d):
+            years.append(d)
 
-for y in years:
-    for p in os.walk(y):
-        if p[1] == []:
-            # build name, stripping .rst from filename
-            for title in p[2]:
-                posts.append(p[0] + '/' + title[:-4])
+    for y in years:
+        for p in os.walk(y):
+            if p[1] == []:
+                # build name, stripping .rst from filename
+                for title in p[2]:
+                    posts.append(p[0] + '/' + title[:-4])
+
+    # sort posts alphabetically
+    posts = sorted(posts, key=lambda p: int(
+        p[:4] + p[5:7] + p[8:10]), reverse=True)
+
+    f = open('master.rst', 'w')
+
+    f.write(preamble)
+    for p in posts:
+        f.write('    ' + p + '\n')
+
+    for page in sorted(os.listdir('pages')):
+        f.write('    pages/' + page + '\n')
+    f.close()
 
 
-# sort posts alphabetically by the first character of their filename
-posts = sorted(posts, key=lambda p: int(
-    p[:4] + p[5:7] + p[8:10]), reverse=True)
+def build_site() -> None:
+    """Build the static site using tinkerer CLI"""
+    proc = Popen(["tinker", "--build"], stdout=PIPE, bufsize=1)
+    for line in iter(proc.stdout.readline, b''):
+        print(line.decode('utf-8').replace('\n', ''))
 
-try:
-    os.remove('master.rst')
-except OSError:
-    pass
-f = open('master.rst', 'w')
 
-f.write(preamble)
-for p in posts:
-    f.write('    ' + p + '\n')
+def fix_http_urls() -> None:
+    """Replace HTTP urls in tinkerer's CSS with HTTPS"""
+    with open('blog/html/_static/flat.css', 'r') as f:
+        fixed_lines = [l.replace('http://', 'https://') for l in f]
 
-for page in sorted(os.listdir('pages')):
-    f.write('    pages/' + page + '\n')
-f.close()
+    with open('blog/html/_static/flat.css', 'w') as f:
+        f.write(''.join(fixed_lines))
+
+
+if __name__ == '__main__':
+    create_sitemap()
+    build_site()
+    fix_http_urls()
