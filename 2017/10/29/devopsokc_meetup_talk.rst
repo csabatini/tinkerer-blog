@@ -13,11 +13,11 @@ Recording
 ---------
 .. raw:: html
 
-  <video width="480" height="320" controls="controls"><source src="_static/videos/devopsokc20171020.webm" type="video/webm"></video>
+  <video width="480" height="320" controls="controls"><source src="https://sabatini.io/_static/videos/devopsokc20171020.webm" type="video/webm"></video>
 
 Slides
 ------
-The slides from this talk are available `here <_static/pdfs/Terraform_and_the_AWS_cloud.pdf>`_.
+The slides from this talk are available :download:`here </_static/pdfs/Terraform_and_the_AWS_cloud.pdf>`.
 
 .. author:: default
 .. categories:: none
