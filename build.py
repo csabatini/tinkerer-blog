@@ -50,9 +50,10 @@ def create_sitemap() -> None:
 
 def build_site() -> None:
     """Build the static site using tinkerer CLI"""
-    proc = Popen(["tinker", "--build"], stdout=PIPE, bufsize=1)
-    for line in iter(proc.stdout.readline, b''):
-        print(line.decode('utf-8').replace('\n', ''))
+    with Popen(["tinker", "--build"], stdout=PIPE, bufsize=1,
+               universal_newlines=True) as p:
+        for line in p.stdout:
+            print(line, end='')
 
 
 def fix_http_urls() -> None:
