@@ -4,9 +4,7 @@ About
 Intro
 -----
 
-Hi, my name is Caleb Sabatini. I'm a Data Engineer living in Oklahoma City. Lately I've been working on building automated pipelines for batch and streaming datasets.
-
-I'm a user of open-source software like the `Apache Hadoop <http://hadoop.apache.org>`_ stack, `Apache Spark <https://spark.apache.org>`_, and `Apache Airflow <https://airflow.apache.org>`_. I'm also interested in DevOps practices like CICD and Infrastructure as Code. 
+My name is Caleb Sabatini, I'm a Data Engineer working in Dallas, Texas. I have an interest in Big Data systems like the `Apache Hadoop <http://hadoop.apache.org>`_ stack, as well as DevOps practices like CI/CD and Infrastructure as Code. 
 
 Email
 -----
@@ -26,10 +24,8 @@ Email
 Links
 -----
 
-* Twitter: `@calebsabatini <https://twitter.com/calebsabatini>`_
-* GitHub: `github.com/csabatini <https://github.com/csabatini>`_
 * LinkedIn: `linkedin.com/in/calebsabatini/ <https://www.linkedin.com/in/calebsabatini/>`_
-* Resume: `caleb_sabatini.pdf <_static/pdfs/caleb_sabatini.pdf>`_
-
+* GitHub: `github.com/csabatini <https://github.com/csabatini>`_
+* Resume: :download:`caleb_sabatini.pdf </_static/pdfs/caleb_sabatini.pdf>`
 
 .. comments::

@@ -11,7 +11,7 @@ import tinkerer.paths
 project = 'Caleb Sabatini'
 
 # Change this to the tagline of your blog
-tagline = 'Data Engineering'
+tagline = 'Data Engineer'
 
 # Change this to the description of your blog
 description = 'Personal Blog of Caleb Sabatini'
@@ -20,7 +20,7 @@ description = 'Personal Blog of Caleb Sabatini'
 author = 'Caleb Sabatini'
 
 # Change this to your copyright string
-copyright = '2017, ' + author
+copyright = '2019, ' + author
 
 # Change this to your blog root URL (required for RSS feed)
 website = 'https://sabatini.io'
